@@ -6,9 +6,10 @@ using System.Threading.Tasks;
 
 namespace TDDHomeWork1
 {
-    public class PagingGroup
+    
+   public class PagingGroup
     {
-        public IEnumerable<int> GroupingFieldValues<T>(IEnumerable<T> data, string fieldName, int pagingCount)
+        public int[] GroupingFieldValues(List<Order> data, string fieldname, int pagingcount)
         {
             throw new NotImplementedException();
         }
