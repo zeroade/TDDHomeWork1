@@ -32,7 +32,7 @@ namespace TDDHomeWork1.Tests
         public void pagingcount為3時Cost為6_15_24_21()
         {
             // arrange
-            var testcase = new PagingGroup();
+            var target = new PagingGroup();
             var expected = new[] { 6, 15, 24, 21 };
 
             //var testData = GetOrders();
@@ -40,10 +40,10 @@ namespace TDDHomeWork1.Tests
             var pagingcount = 3;
 
             // act
-            var actual = testcase.GroupingFieldValues(testdata, fieldname, pagingcount);
+            var actual = target.GroupingFieldValues(testdata, fieldname, pagingcount);
 
             // assert           
-            CollectionAssert.AreNotEquivalent(expected, actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
 
         [TestMethod()]
@@ -61,7 +61,7 @@ namespace TDDHomeWork1.Tests
             var actual = testcase.GroupingFieldValues(testdata, fieldname, pagingcount);
 
             // assert           
-            CollectionAssert.AreNotEquivalent(expected, actual);
+            CollectionAssert.AreEqual(expected, actual);
         }
     }
 }
