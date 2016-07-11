@@ -11,14 +11,20 @@ namespace _91TDDHomeWork2.Tests
     [TestClass()]
     public class BuyCarTests
     {
+        List<Product> target =
+               new List<Product>
+               {
+                    new Product { ProductName = "哈利波特1",SellPrice=100}       
+               };
         [TestMethod()]
         public void 第一集買了一本_其他都沒買_價格應為100元()
         {
             // arrange
-            BuyCar target = new BuyCar();
+
+            BuyCar MyBuyCar = new BuyCar();
             double excepted = 100;
             // act
-            double actual = target.compute();
+            double actual = MyBuyCar.ComputeEndSalePrice(target);
 
             // assert           
             Assert.AreEqual<double>(excepted, actual);
